@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-box {
+  @apply border-[1.5px] border-black outline-none rounded-md pl-11 px-2 py-1 w-full;
+}
+.error-field {
+  @apply ring-red-400 ring-2 border-none;
+}
+.active {
+  @apply underline;
+}
+
+.table-col-title {
+  @apply px-6 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left;
+}
+.table-col-data {
+  @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4;
+}
