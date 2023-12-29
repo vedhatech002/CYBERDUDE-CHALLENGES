@@ -11,18 +11,18 @@
     <title>Employee Management System</title>
     <link rel="stylesheet" href="./src/css/main.css" />
   </head>
-  <body>
+  <body class="font-inter">
     <header
-      class="px-8 py-4 border-b-2 font-inter flex items-center justify-between"
+      class="px-8 py-4 font-inter flex items-center justify-between bg-[#232C33] text-white"
     >
       <!-- logo div -->
       <div class="flex items-center gap-3">
-        <img
+        <!-- <img
           class="drop-shadow-2xl"
           src="./public/istockphoto-1364551751-1024x1024.jpg"
           alt="logo"
           width="40px"
-        />
+        /> -->
         <h1 class="text-xl font-bold">EZEmployeeManager</h1>
       </div>
       <!-- navbar -->
@@ -33,20 +33,23 @@
         <a class="cursor-pointer" id="regEmp">registration</a>
         <a class="cursor-pointer" id="empDet">employee Details</a>
         <a
-          class="text-white bg-black px-2 py-1 rounded-md"
+          class="text-[#DADFF7] bg-black px-2 py-1 rounded-md"
           href="https://github.com/vedhatech002/CYBERDUDE-CHALLENGES/tree/main/JavaScript/javaScriptDom/02-Employee-database-Management"
         >
           GitHub</a
         >
       </nav>
     </header>
-    <!-- registration start -->
-    <main class="font-inter py-12 px-8 bg-[#f2f1ee99] h-[85vh]">
+
+    <main class="font-inter py-12 px-8 bg-[#A0C1D1] h-[90.33vh]">
+      <!-- registration start -->
       <section
         id="registartion-area"
-        class="bg-white px-5 py-5 max-w-sm mx-auto rounded-md shadow-sm shadow-black"
+        class="bg-white px-6 py-8 max-w-md mx-auto rounded-md shadow-sm shadow-[#B5B2C2]"
       >
-        <h2 class="text-center text-xl font-semibold">Fill Employee Details</h2>
+        <h2 class="text-center text-xl font-semibold text-[#232c33 font-inter]">
+          Fill Employee Details
+        </h2>
         <div class="mt-4">
           <form class="flex flex-col gap-5" name="EzEmregistration">
             <!-- name -->
@@ -58,7 +61,7 @@
                 id="name"
                 placeholder=" Name"
               />
-              <span class="absolute left-[2px] top-[1px] border-r-[1.5px] p-1">
+              <span class="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -81,7 +84,7 @@
                 id="email"
                 placeholder="Enter employee email"
               />
-              <span class="absolute left-[2px] top-[1px] border-r-[1.5px] p-1">
+              <span class="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -105,7 +108,7 @@
                 min="0"
                 placeholder=" Phone Num"
               />
-              <span class="absolute left-[2px] top-[1px] border-r-[1.5px] p-1">
+              <span class="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -131,7 +134,7 @@
                 placeholder="Birth Date"
                 min="0"
               />
-              <span class="absolute left-[2px] top-[1px] border-r-[1.5px] p-1">
+              <span class="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -151,11 +154,11 @@
               <div class="flex gap-3">
                 <label
                   for="male"
-                  class="flex text-md items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-black py-1 w-full has-[:checked]:border-2 has-[:checked]:border-black has-[:checked]:bg-[#f2f1ee99]"
+                  class="flex text-md text-[#808080] items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-gray-500 py-1 w-full has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
                 >
                   Male
                   <input
-                    class="w-4 h-4 text-black focus:ring-0 focus:border-black"
+                    class="w-4 h-4 !checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
                     type="radio"
                     value="male"
                     name="gender"
@@ -164,11 +167,11 @@
                 </label>
                 <label
                   for="female"
-                  class="flex text-md items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 py-1 w-full border-black has-[:checked]:border-2 has-[:checked]:border-black has-[:checked]:bg-[#f2f1ee99]"
+                  class="flex text-[#808080] text-md items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 py-1 w-full border-gray-500 has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
                 >
                   Female
                   <input
-                    class="w-4 h-4 text-black focus:ring-0 focus:border-black"
+                    class="w-4 h-4 checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
                     type="radio"
                     value="female"
                     name="gender"
@@ -186,7 +189,7 @@
                 id="role"
                 placeholder="Role"
               />
-              <span class="absolute left-[2px] top-[1px] border-r-[1.5px] p-1">
+              <span class="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -218,7 +221,7 @@
             </div> -->
             <!-- button -->
             <button
-              class="bg-black text-white font-semibold py-1 rounded-md"
+              class="bg-[#232C33] text-white font-semibold py-1 rounded-md"
               type="submit"
             >
               Add Employee
@@ -230,50 +233,19 @@
 
       <!-- employees details -->
       <section
-        class="bg-white hidden block w-full overflow-x-auto shadow-sm shadow-black " 
+        class="bg-white hidden block w-full overflow-x-auto shadow-sm shadow-[#B5B2C2] rounded"
         id="employees-details"
       >
-   
         <table class="items-center bg-transparent w-full border-collapse">
-          <thead>
-            <tr class="border-b ">
-              <th
-              class="table-col-title"
-            >
-              S.no
-            </th>
-              <th
-                class="table-col-title"
-              >
-                Name
-              </th>
-              <th
-                class="table-col-title"
-              >
-                Role
-              </th>
-              <th
-                class="table-col-title"
-              >
-                Gender
-              </th>
-              <th
-                class="table-col-title"
-              >
-                Email
-              </th>
-              </th>
-              <th
-                class="table-col-title"
-              >
-                phone
-              </th>
-              </th>
-              <th
-                class="table-col-title"
-              >
-                Actions
-              </th>
+          <thead class="bg-[#232C33] text-[#DADFF7]">
+            <tr class="border-b border-[#5A7D7C]">
+              <th class="table-col-title">S.no</th>
+              <th class="table-col-title">Name</th>
+              <th class="table-col-title">Role</th>
+              <th class="table-col-title">Gender</th>
+              <th class="table-col-title">Email</th>
+              <th class="table-col-title">phone</th>
+              <th class="table-col-title">Actions</th>
             </tr>
           </thead>
 
@@ -317,9 +289,16 @@
               </span>
               </td>
             </tr> -->
-           
           </tbody>
         </table>
+
+        <!-- no data -->
+        <div id="no-data" class="px-4 py-8 hidden">
+          <img class="mx-auto" src="./public/business-tasklist.png" alt="" />
+          <h2 class="text-[#808080] text-sm text-center font-semibold py-2">
+            Uhho! No Data Found Kindly Register Details
+          </h2>
+        </div>
       </section>
       <!-- employee sdetails  end-->
     </main>

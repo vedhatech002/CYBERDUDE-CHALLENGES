@@ -1,14 +1,19 @@
 //imports functions
 //import from just validate plugin's objects.
 import JustValidate from "just-validate";
+
 import { v4 as uuidv4 } from "uuid";
 //import functions from util.js .
 import { validation, getLocalStorage, setLocalStorage, ChangeUi } from "./util";
+
+import dayjs from "dayjs";
 
 //Dom Selections
 const formEl = document.forms.EzEmregistration;
 const regestrationUiEl = document.querySelector("#registartion-area");
 const empDetailsUiEl = document.querySelector("#employees-details");
+const tableEl = empDetailsUiEl.querySelector("table");
+const noDatapageEl = empDetailsUiEl.querySelector("#no-data");
 const navigationEl = document.querySelector("#nav");
 const empDataListEl = document.querySelector("#emp-datas-list");
 //global variable  to store local storage array data
@@ -30,6 +35,11 @@ validateForm.onSuccess((e) => {
   e.preventDefault();
 
   const formData = new FormData(formEl);
+
+  formData.append(
+    "age",
+    Math.abs(dayjs(formData.get("dob")).diff(dayjs(), "year"))
+  );
   formData.append("id", uuidv4());
   const dataObject = Object.fromEntries(formData);
   console.log(dataObject);
@@ -37,17 +47,20 @@ validateForm.onSuccess((e) => {
   empDetailsArr.push(dataObject);
 
   setLocalStorage(empDetailsArr);
-  ChangeUi(regestrationUiEl, empDetailsUiEl);
+
   formEl.reset;
 
   empDataListEl.innerHTML = "";
 
   createEmpDataTable(empDetailsArr);
+  ChangeUi(regestrationUiEl, empDetailsUiEl);
 });
 
 //create table elements with  data arr
 function createEmpDataTable(arr) {
   if (arr.length > 0) {
+    tableEl.classList.remove("hidden");
+    noDatapageEl.classList.add("hidden");
     const finalEmpData = [];
     arr.map((empData, index) => {
       const trEl = document.createElement("tr");
@@ -59,6 +72,8 @@ function createEmpDataTable(arr) {
       const phoneEl = document.createElement("td");
       const actionEl = document.createElement("td");
       const deleteBtn = document.createElement("span");
+
+      // trEl.classList.add("border-[#5A7D7C]", "border-b-[0.5px]");
 
       snoEl.classList.add("table-col-data");
       snoEl.textContent = index + 1;
@@ -95,7 +110,8 @@ function createEmpDataTable(arr) {
     });
     finalEmpData.forEach((el) => empDataListEl.append(el));
   } else {
-    empDataListEl.innerHTML = "no Data found please add ";
+    tableEl.classList.add("hidden");
+    noDatapageEl.classList.remove("hidden");
   }
 }
 

@@ -5,7 +5,10 @@
 @tailwind utilities;
 
 .input-box {
-  @apply border-[1.5px] border-black outline-none rounded-md pl-11 px-2 py-1 w-full;
+  @apply border-[1.5px] border-[#5A7D7C] outline-none rounded-md pl-11 px-2 py-1 w-full text-[#808080];
+}
+.input-icon {
+  @apply absolute left-[2px] top-[1px] border-r-[1.5px] p-1 text-[#232C33];
 }
 .error-field {
   @apply ring-red-400 ring-2 border-none;

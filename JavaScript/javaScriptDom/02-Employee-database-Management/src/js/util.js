@@ -1,3 +1,9 @@
+import JustValidatePluginDate from "just-validate-plugin-date";
+
+import dayjs from "dayjs";
+
+let yearAbove18 = dayjs().subtract(18, "year").year();
+let above18 = `${yearAbove18}-12-31`;
 function validation(form) {
   form.addField(
     "#name",
@@ -64,6 +70,13 @@ function validation(form) {
     [
       {
         rule: "required",
+      },
+      {
+        plugin: JustValidatePluginDate((fields) => ({
+          format: "yyyy-MM-dd",
+          isBefore: above18,
+        })),
+        errorMessage: "age under 18 not allowed",
       },
     ],
     {
