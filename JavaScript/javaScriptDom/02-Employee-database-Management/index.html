@@ -13,10 +13,10 @@
   </head>
   <body class="font-inter sm:bg-[#A0C1D1]">
     <header
-      class="px-8 py-4 font-inter flex items-center justify-between bg-[#232C33] text-white"
+      class="md:px-8 py-4 font-inter flex items-center justify-between bg-[#232C33] text-white fixed w-full top-0 z-30"
     >
       <!-- logo div -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 md:pl-0 pl-6">
         <!-- <img
           class="drop-shadow-2xl"
           src="./public/istockphoto-1364551751-1024x1024.jpg"
@@ -27,7 +27,7 @@
       </div>
       <!-- navbar -->
       <nav
-        class="md:flex hidden gap-8 text-sm font-semibold items-center"
+        class="md:flex md:flex-row hidden flex flex-col md:gap-8 gap-6 text-sm font-semibold items-center absolute md:top-0 top-[3.2rem] md:relative bg-[#232c33d1] md:w-fit w-screen md:py-0 py-8 duration-700"
         id="nav"
       >
         <a class="cursor-pointer" id="regEmp">registration</a>
@@ -39,9 +39,16 @@
           GitHub</a
         >
       </nav>
+      <div class="space-y-1.5 md:hidden md:pr-0 pr-6" id="menu-icon">
+        <div class="w-6 h-0.5 bg-[#DADFF7] rounded-lg duration-300 bar1"></div>
+        <div class="w-8 h-0.5 bg-[#DADFF7] rounded-lg duration-300 bar2"></div>
+        <div class="w-6 h-0.5 bg-[#DADFF7] rounded-lg duration-300 bar3"></div>
+      </div>
     </header>
 
-    <main class="font-inter sm:py-8 xl:px-16 lg:px-6 sm:px-12 bg-[#A0C1D1]">
+    <main
+      class="font-inter sm:py-8 xl:px-16 lg:px-6 sm:px-12 bg-[#A0C1D1] md:mt-[60px] mt-[50px]"
+    >
       <!-- registration start -->
       <section
         id="registartion-area"
@@ -167,34 +174,35 @@
                     </span>
                   </div>
                   <!-- gender -->
-
-                  <div class="flex gap-3" id="genderRadio">
-                    <label
-                      for="male"
-                      class="flex text-md text-[#808080] items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-gray-500 py-1 w-full has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
-                    >
-                      Male
-                      <input
-                        class="w-4 h-4 !checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
-                        type="radio"
-                        value="male"
-                        name="gender"
-                        id="male"
-                      />
-                    </label>
-                    <label
-                      for="female"
-                      class="flex text-md text-[#808080] items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-gray-500 py-1 w-full has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
-                    >
-                      Female
-                      <input
-                        class="w-4 h-4 checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
-                        type="radio"
-                        value="female"
-                        name="gender"
-                        id="female"
-                      />
-                    </label>
+                  <div id="genderRadio">
+                    <div class="flex gap-3">
+                      <label
+                        for="male"
+                        class="flex text-md text-[#808080] items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-gray-500 py-1 w-full has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
+                      >
+                        Male
+                        <input
+                          class="w-4 h-4 !checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
+                          type="radio"
+                          value="male"
+                          name="gender"
+                          id="male"
+                        />
+                      </label>
+                      <label
+                        for="female"
+                        class="flex text-md text-[#808080] items-center gap-5 justify-between border-[1.5px] outline-none rounded-md px-2 border-gray-500 py-1 w-full has-[:checked]:border-2 has-[:checked]:border-[#232C33] has-[:checked]:bg-[#f2f1ee99] has-[:checked]:text-[#232C33]"
+                      >
+                        Female
+                        <input
+                          class="w-4 h-4 checked:text-[#232C33] focus:ring-0 focus:border-[#232C33]"
+                          type="radio"
+                          value="female"
+                          name="gender"
+                          id="female"
+                        />
+                      </label>
+                    </div>
                   </div>
 
                   <!-- role -->

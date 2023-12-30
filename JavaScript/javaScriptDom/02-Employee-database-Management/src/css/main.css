@@ -23,3 +23,16 @@
 .table-col-data {
   @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap sm:p-4 p-1;
 }
+.menu-active {
+  @apply space-y-1;
+}
+.menu-active .bar1 {
+  @apply rotate-[-45deg] translate-y-1;
+}
+.menu-active .bar2 {
+  @apply rotate-45 !w-6 translate-y-[-1.5px];
+}
+
+.menu-active .bar3 {
+  @apply hidden;
+}

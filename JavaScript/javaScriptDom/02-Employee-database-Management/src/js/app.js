@@ -115,6 +115,14 @@ function createEmpDataTable(arr) {
   }
 }
 
+//delete operation
+function deleteEmpData(empdata) {
+  let existingDatas = empDetailsArr.filter((el) => el.id !== empdata.id);
+  setLocalStorage(existingDatas);
+  empDataListEl.innerHTML = "";
+  createEmpDataTable(existingDatas);
+}
+
 //event to change page
 navigationEl.addEventListener("click", (e) => {
   const target = e.target;
@@ -127,10 +135,8 @@ navigationEl.addEventListener("click", (e) => {
   }
 });
 
-//delete operation
-function deleteEmpData(empdata) {
-  let existingDatas = empDetailsArr.filter((el) => el.id !== empdata.id);
-  setLocalStorage(existingDatas);
-  empDataListEl.innerHTML = "";
-  createEmpDataTable(existingDatas);
-}
+//menu toggle
+document.querySelector("#menu-icon").addEventListener("click", function () {
+  this.classList.toggle("menu-active");
+  document.querySelector("#nav").classList.toggle("hidden");
+});
