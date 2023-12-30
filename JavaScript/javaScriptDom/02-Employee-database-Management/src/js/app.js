@@ -68,6 +68,7 @@ function createEmpDataTable(arr) {
       const nameEl = document.createElement("th");
       const roleEl = document.createElement("td");
       const genderEl = document.createElement("td");
+      const ageEl = document.createElement("td");
       const emailEl = document.createElement("td");
       const phoneEl = document.createElement("td");
       const actionEl = document.createElement("td");
@@ -87,6 +88,9 @@ function createEmpDataTable(arr) {
       genderEl.classList.add("table-col-data");
       genderEl.textContent = empData.gender;
 
+      ageEl.classList.add("table-col-data");
+      ageEl.textContent = empData.age;
+
       emailEl.classList.add("table-col-data");
       emailEl.textContent = empData.email;
 
@@ -104,7 +108,16 @@ function createEmpDataTable(arr) {
       });
       actionEl.append(deleteBtn);
 
-      trEl.append(snoEl, nameEl, roleEl, genderEl, emailEl, phoneEl, actionEl);
+      trEl.append(
+        snoEl,
+        nameEl,
+        roleEl,
+        genderEl,
+        ageEl,
+        emailEl,
+        phoneEl,
+        actionEl
+      );
 
       finalEmpData.push(trEl);
     });
