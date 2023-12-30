@@ -48,7 +48,7 @@ validateForm.onSuccess((e) => {
 
   setLocalStorage(empDetailsArr);
 
-  formEl.reset;
+  formEl.reset();
 
   empDataListEl.innerHTML = "";
 
