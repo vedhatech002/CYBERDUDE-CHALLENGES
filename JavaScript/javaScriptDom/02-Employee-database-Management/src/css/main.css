@@ -21,5 +21,5 @@
   @apply px-6 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left;
 }
 .table-col-data {
-  @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4;
+  @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap sm:p-4 p-1;
 }
