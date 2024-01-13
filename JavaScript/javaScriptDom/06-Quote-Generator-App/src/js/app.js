@@ -17,9 +17,22 @@ async function showQuote() {
   console.log(QuoteData);
   blocquoteTextEl.innerText = QuoteData.slip.advice;
 }
+showQuote();
 
 btnEl.addEventListener("click", () => {
   showQuote();
 });
 
-showQuote();
+const copyEl = document.querySelector("#copy-quote");
+const copyQUote = () => {
+  navigator.clipboard.writeText(blocquoteTextEl.innerText);
+  copyEl.style.backgroundColor = "#bbc6d494";
+  const copyTitle = copyEl.querySelector("p");
+  copyTitle.innerText = "Quote copied";
+  setTimeout(() => {
+    copyEl.style.backgroundColor = "#bbc6d4";
+    copyTitle.innerText = " Copy Quote ";
+  }, 1500);
+};
+
+copyEl.addEventListener("click", copyQUote);
