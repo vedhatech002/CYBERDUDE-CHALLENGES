@@ -1,0 +1,28 @@
+{
+  "myName": "Vijayavedhasekaran",
+  "myRole": "Full-Stack Engineer",
+  "myImg": "/mypic.png",
+  "projects": [
+    {
+      "name": "Product filter",
+      "description": "This endeavor revolves around an online clothing shop filter system, offering users the flexibility to filter by category, brand, and price, alongside a powerful search functionality. ",
+      "img": "/producr-filter.png",
+      "source": "https://github.com/vedhatech002/Product-filter-page",
+      "live": "https://vedhatech002.github.io/Product-filter-page/"
+    },
+    {
+      "name": "Instagram UI",
+      "description": "clone of instagram  and responsive feature using mediaquries ,grid system ,show and hide element for responsive purpose and breakpoints configaration based on our needs in Tailwind Css",
+      "img": "/instagram.png",
+      "source": "https://github.com/vedhatech002/Instagram-Ui-Tailwind",
+      "live": "https://vedhatech002.github.io/Instagram-Ui-Tailwind/"
+    },
+    {
+      "name": "Relationship predicter",
+      "description": " This is an application based on the popular FLAMES game, which we used to play with pen and paper to determine the relationship between ourselves and our crush based on our names ",
+      "img": "/relationship.png",
+      "source": "https://github.com/vedhatech002/Relationship-predicter",
+      "live": "https://vedhatech002.github.io/Relationship-predicter/"
+    }
+  ]
+}
