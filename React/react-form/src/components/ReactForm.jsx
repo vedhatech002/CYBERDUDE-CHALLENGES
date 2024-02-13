@@ -1,14 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+
 import { useForm } from "react-hook-form";
-import Input from "./components/Input";
+import Input from "./Input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import z from "zod";
+
+const formShcema = z.object({
+  title: z
+    .string({})
+    .min(1, { message: "this field is required" })
+    .min(3, { message: "this field should not empty and min 3 character" })
+    .max(20),
+});
 
 const ReactForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: zodResolver(formShcema) });
 
   console.log(useForm());
   const sendInfo = (data) => {
@@ -24,7 +34,7 @@ const ReactForm = () => {
         <Input
           name="title"
           placeholder="enter your title"
-          register={register("title", { required: "this field is required" })}
+          register={register("title")}
           error={errors.title}
         />
         <input
@@ -58,7 +68,3 @@ const ReactForm = () => {
     </main>
   );
 };
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<ReactForm />);

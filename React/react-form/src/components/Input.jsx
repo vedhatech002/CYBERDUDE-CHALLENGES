@@ -4,14 +4,16 @@ const Input = ({ name, type = "text", placeholder, register, error }) => {
   return (
     <>
       <input
-        className="px-6 py-1.5 bg-[#1c1a18] rounded-md border-2 border-red-700 outline-none w-full text-slate-300"
+        className={`bg-[#1f1f1f] px-4 py-1 rounded w-full  outline-none`}
         id={name}
         name={name}
         type={type}
         placeholder={placeholder}
         {...register}
       />
-      {error && <small>{error.message}</small>}
+      {error && (
+        <small className="text-sm text-red-500 ml-1">{error.message}</small>
+      )}
     </>
   );
 };
