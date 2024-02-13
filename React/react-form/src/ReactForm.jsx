@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useForm } from "react-hook-form";
+import Input from "./components/Input";
 
 const ReactForm = () => {
   const {
@@ -20,6 +21,12 @@ const ReactForm = () => {
         className="w-full space-y-6 text-white px-4 py-8"
         onSubmit={handleSubmit(sendInfo)}
       >
+        <Input
+          name="title"
+          placeholder="enter your title"
+          register={register("title", { required: "this field is required" })}
+          error={errors.title}
+        />
         <input
           type="text"
           name="userName"
@@ -34,19 +41,15 @@ const ReactForm = () => {
           })}
         />
         {errors.userName && <small>{errors.userName.message}</small>}
-        <small></small>
+
         <input
           type="text"
           name="userEmail"
           placeholder="enter your email"
           className="bg-[#1f1f1f] px-4 py-1 rounded w-full"
+          {...register("userEmail", { required: "this field is required" })}
         />
-        <input
-          type="number"
-          name="userMobile"
-          placeholder="enter your mobile num"
-          className="bg-[#1f1f1f] px-4 py-1 rounded w-full"
-        />
+        {errors.userName && <small>{errors.userName.message}</small>}
 
         <button className="bg-[#08a7ff] w-full px-4 py-1 rounded">
           Submit
