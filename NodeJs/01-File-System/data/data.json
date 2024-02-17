@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "district": "Trichy",
+    "mustVisit": [
+      {
+        "name": "Sri Ranganathaswamy Temple",
+        "description": "One of the largest functioning Hindu temples in the world, dedicated to Lord Vishnu."
+      },
+      {
+        "name": "Rockfort Temple",
+        "description": "A historic fort complex with a temple perched on a rock, offering panoramic views of the city."
+      },
+      {
+        "name": "Srirangam Island",
+        "description": "An island formed by the rivers Kaveri and Kollidam, housing the Sri Ranganathaswamy Temple."
+      }
+    ],
+    "famousFood": [
+      "Traditional Tamil cuisine including dosa, idli, sambar, and rasam."
+    ],
+    "agricultureCrops": ["Rice", "Sugarcane", "Bananas", "Coconuts"],
+    "businessCulture": "Diverse economy with industries like manufacturing, education, and tourism contributing significantly. Known for educational institutions and engineering industry."
+  },
+  {
+    "id": 2,
+    "district": "Nagapattinam",
+    "mustVisit": [
+      {
+        "name": "Vedaranyam",
+        "description": "Known for the Vedaranyeswarar Temple dedicated to Lord Shiva and the nearby mangrove forests of Muthupet."
+      },
+      {
+        "name": "Kodiyakkarai",
+        "description": "A coastal town famous for its serene beaches and bird-watching opportunities, particularly during migratory bird seasons."
+      },
+      {
+        "name": "Velankanni",
+        "description": "Renowned for the Velankanni Church and beautiful beaches."
+      }
+    ],
+    "famousFood": [
+      "Fresh seafood dishes like fish curry, prawn masala, and crab fry."
+    ],
+    "agricultureCrops": ["Paddy", "Coconut", "Pulses", "Cashew nuts"],
+    "businessCulture": "Fishing, agriculture, tourism, salt production, and handicrafts contribute significantly to the economy."
+  },
+  {
+    "id": 3,
+    "district": "Coimbatore",
+
+    "mustVisit": [
+      {
+        "name": "Ooty",
+        "description": "Known for its tea plantations, botanical gardens, and scenic beauty."
+      },
+      {
+        "name": "Coonoor",
+        "description": "Famous for its picturesque landscapes, tea estates, and the Sim's Park botanical garden."
+      }
+    ],
+    "famousFood": [
+      "Coimbatore is famous for its unique cuisine, including dishes like kozhikari, angannan biriyani, and idli with various chutneys."
+    ],
+    "agricultureCrops": ["Tea", "Coffee", "Coconuts", "Bananas"],
+    "businessCulture": "Coimbatore is a major hub for textiles, manufacturing, and education. It's known for its entrepreneurial spirit and industrial development."
+  },
+  {
+    "id": 3,
+    "district": "Tirunelveli",
+    "mustVisit": [
+      {
+        "name": "Kanyakumari",
+        "description": "Renowned for its breathtaking sunrise, sunset views, and the Vivekananda Rock Memorial."
+      },
+      {
+        "name": "Courtallam",
+        "description": "Known as the 'Spa of South India' for its numerous waterfalls and natural beauty."
+      }
+    ],
+    "famousFood": [
+      "Tirunelveli is famous for its unique cuisine, including dishes like Iruttu Kadai Halwa, Ulunthu Kali, and Karupatti Mittai."
+    ],
+    "agricultureCrops": ["Paddy", "Coconuts", "Bananas", "Rubber"],
+    "businessCulture": "Tirunelveli is known for its agricultural products, especially paddy and coconuts. It also has a thriving handloom industry and is a major center for trade."
+  },
+  {
+    "id": 4,
+    "district": "Salem",
+    "mustVisit": [
+      {
+        "name": "Yercaud",
+        "description": "A hill station known for its pleasant climate, coffee plantations, and scenic viewpoints like Lady's Seat and Pagoda Point."
+      }
+    ],
+    "famousFood": [
+      "Salem is famous for its unique cuisine, including dishes like Kal dosai, Mutton Chukka, and Biryani."
+    ],
+    "agricultureCrops": ["Mangoes", "Poultry", "Sheep", "Cattle"],
+    "businessCulture": "Salem is known for its agricultural produce, particularly mangoes. It also has a significant presence in the poultry and livestock industries."
+  }
+]

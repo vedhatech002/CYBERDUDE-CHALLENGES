@@ -1,0 +1,11 @@
+{
+  "name": "01-file-system",
+  "version": "1.0.0",
+  "description": "create a folders and files using filesystem modules nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vijayavedhasekaran",
+  "license": "ISC"
+}
