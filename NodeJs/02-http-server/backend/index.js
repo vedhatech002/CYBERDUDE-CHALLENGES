@@ -1,7 +1,7 @@
 import http from "http";
 import internsData from "./data/data.json" assert { type: "json" };
 
-const SERVER_PORT = "6969";
+const SERVER_PORT = "2002";
 
 const server = http.createServer((request, response) => {
   if (request.url === "/interns") {

@@ -11,7 +11,7 @@ function App() {
   }, []);
 
   const fetchData = async () => {
-    const getData = await fetch("http://localhost:6969/interns");
+    const getData = await fetch("http://localhost:2002/interns");
 
     const jsonData = await getData.json();
     console.log(jsonData);

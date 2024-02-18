@@ -11,7 +11,7 @@ const Header = () => {
         <button className="bg-[#0dba4b] text-white font-semibold px-4 py-1 rounded-md">
           <a
             target="_blank"
-            href="https://github.com/vedhatech002/CYBERDUDE-CHALLENGES/tree/main/NodeJs/02-htttp-server"
+            href="https://github.com/vedhatech002/CYBERDUDE-CHALLENGES/tree/main/NodeJs/02-http-server"
           >
             GitHub
           </a>
